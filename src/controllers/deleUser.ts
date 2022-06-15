@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { connectDB } from "../database/schemas/user";
+import { connectDB } from "../models/dbConnection";
 
 interface BodyRequest{
     id: number
