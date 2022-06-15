@@ -7,9 +7,8 @@ interface BodyRequest{
 }
 
 export const createUser = async (req: Request, res: Response) => {
-    const { name, email }: BodyRequest = req.body;
+    const { name, email }:BodyRequest = req.body;
     const db = await connectDB();
-
     try {
         await db.query("INSERT INTO users (name, email) VALUES(?,?)",
             [name, email]);
