@@ -8,5 +8,6 @@ export const connectDB = async () => {
         database: "crud_db",
     });
 
+    console.log("Connected at MySQL");
     return connection;
 };
