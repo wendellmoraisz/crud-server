@@ -16,5 +16,5 @@ export const updateUser = async (req: Request, res: Response) => {
         res.send({status: 200, message: "user successful updated"})
     } catch(e){
         res.send({status: 401, message: e});
-    }
+    };
 };

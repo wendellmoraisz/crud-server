@@ -15,5 +15,5 @@ export const createUser = async (req: Request, res: Response) => {
         res.send({status: 200, message: "usuário registrado com sucesso!"});
     } catch(e) {
         res.send({status: 400, message: e});
-    }
+    };
 };
