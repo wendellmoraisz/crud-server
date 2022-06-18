@@ -12,8 +12,8 @@ export const createUser = async (req: Request, res: Response) => {
     try {
         await db.query("INSERT INTO users (name, email) VALUES(?,?)",
             [name, email]);
-        res.send({status: 200, message: "usuário registrado com sucesso!"});
-    } catch(e) {
-        res.send({status: 400, message: e});
+            res.send({status: 200, message: "user successful registered"});
+    } catch(e){
+        res.send({error: e});
     };
 };
