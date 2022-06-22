@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { QueryError } from "mysql2";
 import { connectDB } from "../models/dbConnection";
 
 interface BodyRequest{
@@ -14,6 +15,6 @@ export const createUser = async (req: Request, res: Response) => {
             [name, email]);
             res.send({status: 200, message: "user successful registered"});
     } catch(e){
-        res.send({error: e});
+        res.send({status: 401, message: e});
     };
 };
